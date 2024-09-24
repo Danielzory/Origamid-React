@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Aula3 from "./Aula 3/Aula3";
+import Aula4 from "./Aula 4/Aula4";
 
 
 const luana = {
@@ -97,6 +98,9 @@ const total = cliente.compras
         <hr />
 
         <Aula3 />
+
+        <hr />
+        <Aula4 />
 
 
         

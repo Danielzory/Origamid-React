@@ -12,7 +12,7 @@ const Aula3 = () => {
 
   return (
     <div>
-      <h2>Atividade</h2>
+      <h2>Atividade 2</h2>
 
       <Header3 />
       <Page />
