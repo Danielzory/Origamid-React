@@ -31,10 +31,6 @@ const luana = {
   };
 
 
-
-
-
-
 const App = () => {
 
  const [nome, setNome] = useState('');
@@ -102,8 +98,6 @@ const total = cliente.compras
         <hr />
         <Aula4 />
 
-
-        
     </>
     ) 
 }
