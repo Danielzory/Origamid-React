@@ -3,6 +3,7 @@ import Botao from './Botão.js/Botao'
 import Modal from './Modal/Modal'
 import { useState } from 'react'
 import BotaoContador from './Botão.js/BotaoContador'
+import Atv3Modal from './Modal/Atv3Modal'
 
 const Aula4 = () => {
     const [ativo, setAtivo] = useState(false);
@@ -16,6 +17,8 @@ const Aula4 = () => {
 
         <hr />
         <h2>Atividade 3</h2>
+
+        <Atv3Modal />
     </>
   )
 }
