@@ -1,5 +1,4 @@
 import React from 'react'
-import Produto from './Produto3';
 import Produto3 from './Produto3';
 
 const Atv3Modal = () => {
@@ -21,7 +20,7 @@ const Atv3Modal = () => {
         <button style={{margin: '0.5rem'}} onClick={handleClick} >Tablet</button>
         <button style={{margin: '0.5rem'}} onClick={handleClick} >Smartphone</button>
         {loading && <h3>Carregando...</h3>}
-        {dados && <Produto3 dados={dados} />}
+        {!loading && dados && <Produto3 dados={dados} />}
     </>
    
       

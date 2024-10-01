@@ -52,7 +52,7 @@ const App = () => {
     fontFamily: 'cursive',
  }
 
-const cliente = mario
+const cliente = luana
  
 const total = cliente.compras
    .map((item) => Number(item.preco.replace("R$ ", "")))
@@ -74,7 +74,7 @@ const total = cliente.compras
         />
         <h2>Olá! {nome}</h2>
         <p style={estiloP}>Seu Saldo bancário é de <strong>: $ {saldo}</strong></p>
-        {saldo < 200 ? <strong>A grana ta baixa né...</strong> : <strong>Conta recheada</strong>}
+        {saldo < 3000 ? <strong>A grana ta baixa né...</strong> : <strong>Conta recheada</strong>}
         <hr/>
         <h2>Atividade 1</h2>
 
