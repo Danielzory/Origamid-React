@@ -6,6 +6,7 @@ import BotaoContador from './Botão.js/BotaoContador'
 import Atv3Modal from './Modal/Atv3Modal'
 import Carro from './Carro.js/Carro'
 import Preco from './Modal/Preco'
+import Atividade4 from './Botão.js/Atividade4'
 
 const Aula4 = () => {
     const [ativo, setAtivo] = useState(false);
@@ -24,8 +25,9 @@ const Aula4 = () => {
         <Atv3Modal />
         <hr />
         <h2>Hooks - useEfferct</h2>
-
         <Preco />
+        <hr />
+        <Atividade4 />
     </>
   )
 }
