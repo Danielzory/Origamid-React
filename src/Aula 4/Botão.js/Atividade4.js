@@ -21,7 +21,7 @@ const Atividade4 = () => {
   return (
     <div>
         <h2>Atividade 4</h2>
-        <h2>Preferêmcia: {produto.toUpperCase()}</h2>
+        <h2>Preferêmcia: {produto}</h2>
         
         <button onClick={handleClick} style={{marginRight: '1rem'}} >Notebook</button>
         <button onClick={handleClick} >SmartPhone</button>

@@ -7,6 +7,8 @@ import Atv3Modal from './Modal/Atv3Modal'
 import Carro from './Carro.js/Carro'
 import Preco from './Modal/Preco'
 import Atividade4 from './Botão.js/Atividade4'
+import Chat from './Chat/Chat'
+import Carrinho from './Carrinho'
 
 const Aula4 = () => {
     const [ativo, setAtivo] = useState(false);
@@ -28,6 +30,10 @@ const Aula4 = () => {
         <Preco />
         <hr />
         <Atividade4 />
+        <hr />
+        <Chat />
+        <hr />
+        <Carrinho />
     </>
   )
 }
