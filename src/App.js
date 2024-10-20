@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Aula3 from "./Aula 3/Aula3";
 import Aula4 from "./Aula 4/Aula4";
 import Aula5 from "./Aula5/Aula5";
+import Aula6 from "./Aula 6/Aula6";
 
 
 const luana = {
@@ -101,6 +102,8 @@ const total = cliente.compras
 
         <hr />
         <Aula5 />       
+
+        <Aula6 />
 
     </>
     ) 
