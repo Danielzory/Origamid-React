@@ -3,6 +3,7 @@ import Aula3 from "./Aula 3/Aula3";
 import Aula4 from "./Aula 4/Aula4";
 import Aula5 from "./Aula5/Aula5";
 import Aula6 from "./Aula 6/Aula6";
+import Aula7 from "./Aula 7/Aula7";
 
 
 const luana = {
@@ -94,16 +95,13 @@ const total = cliente.compras
             {total >= 8000 && <p>Você esta gastando demais!</p>}
         </div>
         <hr />
-
         <Aula3 />
-
         <hr />
         <Aula4 />
-
         <hr />
         <Aula5 />       
-
         <Aula6 />
+        <Aula7 />
 
     </>
     ) 
