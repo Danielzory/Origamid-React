@@ -118,3 +118,82 @@ const Ex = () => {
 }
 
 export default Ex
+
+/*Solução Prof. bem mais optimizada
+
+const formFields = [
+    {
+        id: 'nome',
+        type: 'text'
+    },
+    {
+        id: 'email',
+        type: 'email'
+    },
+    {
+        id: 'senha',
+        type: 'password'
+    },
+    ...
+]
+
+
+const Ex = () => {
+    const [response, setResponse] = React.useState(null);
+    const [form, setForm] = React.useState(
+        formFields.reduce((acc, field) => {
+            return {
+                ... acc,
+                [field.id]: '',
+            };
+        }, {}),
+    );    
+
+    function handleSubmit (e) {
+        e.preventDefault();
+
+        fetch('https://ranekapi.origamid.dev/json/api/usuario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(form)
+        }).then((response) => {
+            setResponse(response);
+        });
+
+    }
+
+    function handleChange ({target}) {
+        const {id, value} = target;
+        setForm({...form, [id]: value});
+    }
+
+    //map com os campos do form
+  return (
+    <form onSubmit={handleSubmit}>
+        <h3>Atividade 7</h3>
+
+        {formField.map(({id, type})=> (
+            <div>
+                <input 
+                type={type}
+                id={id}
+                onChange={handleChange}
+                value={form[id]}
+                />
+            </div>
+        ))}
+
+        {response && response.ok && <p>Cadastrado com Sucesso!</p>}
+        <button>Cadastrar</button>
+      
+    </form>
+  )
+}
+
+export default Ex
+
+
+*/
+
