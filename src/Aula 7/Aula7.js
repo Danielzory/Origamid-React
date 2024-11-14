@@ -5,6 +5,7 @@ import Ex from './Ex'
 import TextArea from './TextArea'
 import Select from './Select'
 import Radio from './Radio'
+import Checkbox from './Checkbox'
 
 const Aula7 = () => {
   return (
@@ -15,6 +16,7 @@ const Aula7 = () => {
         <TextArea />
         <Select />
         <Radio />
+        <Checkbox />
       
     </div>
   )
