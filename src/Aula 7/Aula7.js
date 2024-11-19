@@ -6,6 +6,7 @@ import TextArea from './TextArea'
 import Select from './Select'
 import Radio from './Radio'
 import Checkbox from './Checkbox'
+import MultCheck from './MultCheck'
 
 const Aula7 = () => {
   return (
@@ -17,6 +18,7 @@ const Aula7 = () => {
         <Select />
         <Radio />
         <Checkbox />
+        <MultCheck />
       
     </div>
   )

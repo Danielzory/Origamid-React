@@ -7,6 +7,7 @@ const Checkbox = () => {
 
   return (
     <form>
+      <h3>Termos ....</h3>
         {termos && <p>Aceitou os termos</p> }
         <label>
             <input 
@@ -17,6 +18,7 @@ const Checkbox = () => {
             />
             Aceito os termos
         </label>
+        <hr />
     </form>
   )
 }
