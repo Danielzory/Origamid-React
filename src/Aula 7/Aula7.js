@@ -7,6 +7,7 @@ import Select from './Select'
 import Radio from './Radio'
 import Checkbox from './Checkbox'
 import MultCheck from './MultCheck'
+import FormDefault from './Default Componentes/FormDefault'
 
 const Aula7 = () => {
   return (
@@ -19,6 +20,7 @@ const Aula7 = () => {
         <Radio />
         <Checkbox />
         <MultCheck />
+        <FormDefault />
       
     </div>
   )
