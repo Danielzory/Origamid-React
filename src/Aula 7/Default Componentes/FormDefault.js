@@ -3,17 +3,31 @@ import InputDefault from './InputDefault'
 import SelectDefault from './SelectDefault';
 import RadioDefault from './RadioDefault';
 import CheckBoxDefault from './CheckBoxDefault';
+import useForm from './Hooks/useForm';
 
 const FormDefault = () => {
-    const [nome, setNome] = React.useState('');
-    const [senha, setSenha] = React.useState('');    
+    const [nome, setNome] = React.useState(''); 
     const [produto, setProduto] = React.useState('')
     const [cor, setCor] = React.useState('')
     const [controle, setControle] = React.useState('')
     const [pag, setPag] = React.useState([])
+    const cep = useForm('cep') // apliquei a validação apenas para cep e senha
+    const senha = useForm('senha')
+
+
+
+    function handleSubmit (e) {
+      e.preventDefault();
+      if (cep.validade()) {
+        console.log('Enviar')
+      } else {
+        console.log('Não Enviar')
+      }
+
+    }  
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <InputDefault 
             id='name'
             label='Nome'
@@ -25,8 +39,8 @@ const FormDefault = () => {
             id='senha'
             label='Senha'
             type='password'
-            value={senha}
-            setValue={setSenha}
+            placeholder= 'Senha@123'
+            {...senha}
         />
         <SelectDefault 
             options={["PS5", "Nintendo Switch", "X Box Series X"]}
@@ -51,6 +65,14 @@ const FormDefault = () => {
           value={pag}
           setValue={setPag}
         />
+        <InputDefault 
+          id='cep'
+          label='Cep'
+          type='text'
+          placeholder= '0000-000'
+          {...cep} // assim espalho todos os itens necessários no return do useForm
+        />
+
       <button>Enviar</button>
     </form>
   )
