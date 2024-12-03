@@ -8,6 +8,7 @@ import Radio from './Radio'
 import Checkbox from './Checkbox'
 import MultCheck from './MultCheck'
 import FormDefault from './Default Componentes/FormDefault'
+import Desafio from './Default Componentes/Desafio'
 
 const Aula7 = () => {
   return (
@@ -21,6 +22,7 @@ const Aula7 = () => {
         <Checkbox />
         <MultCheck />
         <FormDefault />
+        <Desafio />
       
     </div>
   )

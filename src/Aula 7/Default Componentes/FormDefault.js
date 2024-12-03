@@ -18,7 +18,7 @@ const FormDefault = () => {
 
     function handleSubmit (e) {
       e.preventDefault();
-      if (cep.validade()) {
+      if (cep.validade() && senha.validade()) {
         console.log('Enviar')
       } else {
         console.log('Não Enviar')

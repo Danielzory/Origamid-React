@@ -1,8 +1,10 @@
 import React from 'react'
 
-const RadioDefault = ({options, value, setValue, ...props}) => {
+const RadioDefault = ({options, value, setValue, pergunta, ...props}) => {
   return (
-    <>
+    <fieldset>
+
+      <legend>{pergunta}</legend>
         {options.map((option) => (
             <label key={option}>
                 <input 
@@ -16,7 +18,7 @@ const RadioDefault = ({options, value, setValue, ...props}) => {
             </label>
         ))}
 
-    </>
+    </fieldset>
   )
 }
 
