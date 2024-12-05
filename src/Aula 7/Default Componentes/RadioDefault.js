@@ -1,10 +1,9 @@
 import React from 'react'
 
-const RadioDefault = ({options, value, setValue, pergunta, ...props}) => {
+const RadioDefault = ({options, value, setValue, ...props}) => {
   return (
     <fieldset>
 
-      <legend>{pergunta}</legend>
         {options.map((option) => (
             <label key={option}>
                 <input 

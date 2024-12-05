@@ -1,10 +1,17 @@
 import React from 'react'
-import RadioDefault from './RadioDefault'
+import DesafioRadio from './DesafioRadio'
 
 const Desafio = () => {
-    const [questao, setQuestao] = React.useState(0)
-    const [resposta, setResposta] = React.useState('')
-
+    //React hooks
+    const [respostas, setRespostas] = React.useState({
+        p1: '',
+        p2: '',
+        p3: '',
+        p4: ''
+    });
+    const [slide, setSlide] = React.useState(0);
+    const [resultado, setResultado] = React.useState('')
+    //Array
     const perguntas = [
         {
             pergunta: 'Qual método é utilizado para criar componentes ?',
@@ -46,12 +53,42 @@ const Desafio = () => {
             resposta: 'use',
             id: 'p4'
         }
-    ]
+    ];
+    //Functions
+    function handleChange ({target}) {
+        setRespostas({...respostas, [target.id]: target.value})
+    };
+
+    function resultadoFinal () {
+        const corretas = perguntas.filter(
+            ({id, resposta}) => respostas[id] === resposta  //Usa id e resposta do array perguntas e verifica de o id do estado respostas é igual a resposta do array
+        );
+        setResultado(`Você acertou: ${corretas.length} de ${perguntas.length} perguntas `)
+    };
+
+    function handleClick (){
+        if(slide < perguntas.length - 1){
+            setSlide(slide +1);
+        } else {
+            setSlide(slide +1);
+            resultadoFinal();
+        }
+    };
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-        <RadioDefault pergunta={perguntas[questao].pergunta} options={perguntas[questao].options} value={resposta} setValue={setResposta}/>
-        <button onClick={()=>{setQuestao(questao + 1)}}>Avançar</button>
+        {perguntas.map((pergunta, index) => (
+            <DesafioRadio 
+                active={slide === index}
+                key={pergunta.id}
+                value={respostas[pergunta.id]}
+                {...pergunta}
+                onChange={handleChange}
+        
+            />
+        ))}
+        
+        {resultado ? <p>{resultado}</p> : <button onClick={handleClick}>Avançar</button>}
     </form>
   )
 }
