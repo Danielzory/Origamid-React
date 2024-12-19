@@ -4,6 +4,7 @@ import Aula4 from "./Aula 4/Aula4";
 import Aula5 from "./Aula5/Aula5";
 import Aula6 from "./Aula 6/Aula6";
 import Aula7 from "./Aula 7/Aula7";
+import Aula8 from "./Aula 8/Aula8";
 
 
 const luana = {
@@ -102,6 +103,7 @@ const total = cliente.compras
         <Aula5 />       
         <Aula6 />
         <Aula7 />
+        <Aula8 />
 
     </>
     ) 
